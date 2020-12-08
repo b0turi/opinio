@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap');
+
+:root {
+    --base: #ede5d7;
+    --shadow: #2a2726;
+
+    --accent1: #ac0f16;
+    --accent1-highlight: #bc3e44;
+    --accent1-shading: #56070b;
+
+    --accent2: #f1792f;
+    --accent2-highlight: #f49459;
+    --accent2-shading: #ab480b;
+
+    --accent3: #fff0ab;
+    --accent3-highlight: #fff8e6;
+    --accent3-shading: #aaa071;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather Sans';
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    background-color: var(--base);
+    height: 100%;
+}
+
+.header {
+    box-sizing: border-box;
+    background-color: var(--accent1);
+    border-bottom: 8px solid var(--accent1-shading);
+    border-top: 2px solid var(--accent1-highlight);
+}
+
+.title-box {
+    width: auto;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.title {
+    color: var(--base);
+    text-shadow: 2px 5px var(--shadow);
+    font-family: 'Lilita One',cursive;
+    font-size: 48px;
+    padding: 10px;
+}
+
+.subtitle {
+    color: var(--base);
+    font-family: 'Lilita One', cursive;
+    text-shadow: 1px 3px var(--shadow);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+h1 {
+    color: var(--accent2);
+    font-family: 'Lilita One', cursive;
+    text-shadow: 4px 6px var(--accent2-shading);
+    margin: 15px;
+    font-size: 72px;
+    text-align: center;
+}
+
+.header-menu-item {
+    float: right;
+    margin-top: -2px;
+}
+
+.header-button {
+    background-color: var(--accent2);
+    font-family: 'Lilita One', cursive;
+    font-size: 38px;
+    border-top: 2px solid var(--accent2-highlight);
+    border-bottom: 8px solid var(--accent2-shading);
+    padding: 16px;
+    text-align: center;
+    color: var(--base);
+    float: right;
+    cursor: pointer;
+    text-shadow: 2px 5px var(--accent2-shading);
+}
+
+.header-button:hover {
+    background-color: var(--accent2-highlight);
+}
+
+.header-search::placeholder {
+    color: var(--accent3-shading);
+    opacity: 0.4;
+}
+
+.header-search {
+    font-size: 34px;
+    font-family: 'Lilita One';
+    padding: 18.5px;
+    background-color: var(--accent3);
+    border: none;
+    border-bottom: 8px solid var(--accent3-shading);
+    border-top: 2px solid var(--accent3-highlight);
+    float:right;
+    color: var(--accent3-shading);
+}
+
+@media only screen and (min-width: 600px) {
+    .header-search-container {
+        float: right;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header-search-container {
+        width: 80%;
+    }
+}
+
+.header-search::selection {
+    background-color: var(--accent3-shading);
+    color: var(--accent3-highlight);
+}
+
+.header-search-icon {
+    padding-top: 22px;
+}
