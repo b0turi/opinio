@@ -7,7 +7,6 @@ app.get('/', function(req, res) {
 	res.sendFile(__dirname + '/index.html');
 });
 app.get('/token', function(req, res) {
-	getAccessToken();
 	res.send({token: accessToken});
 	
 });
@@ -36,7 +35,10 @@ let authOptions = {
 function getAccessToken() {
 	request.post(authOptions, function(error, response, body) {
 		if(!error && response.statusCode === 200) {
-			accessToken = body.access_token;
+			accessToken =  body.access_token;
 		}
 	});
 }
+
+getAccessToken();
+setInterval(getAccessToken, 1000 * 3600);

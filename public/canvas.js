@@ -164,13 +164,12 @@ function drawBackground(){
 function drawCanvas(userName, data) {
 
     let images = [];
+    let loadedCount = 0;
     for(let i in data) {
     	images.push(data[i]['image']);
-    }
-    console.log(images);
-
-    //while(images.length < 10) {}
-
+	images[i].onload = function() {
+		loadedCount++;
+		if(loadedCount == 10) {
     topText = userName.toUpperCase() + "'S TOP 10 ALBUMS OF 2020";
     drawBackground();
     let goldText = '#FFFEC4';
@@ -248,11 +247,21 @@ function drawCanvas(userName, data) {
     if(textWidth > 950) {
         ctx.scale(950 / textWidth, 1);
     }
-
     ctx.fillStyle = '#2a2726';
     ctx.fillText(topText, -(textWidth / 2) + 3, 64);
 
     ctx.fillStyle = '#ede5d7';
     ctx.fillText(topText, -(textWidth / 2), 60);
     ctx.restore();
+	let result = new Image();
+	result.crossOrigin = "anonymous";
+	result.src = canvas.toDataURL();
+	result.classList.add("resultImg");
+	result.onload = function(){
+		$("#result").html(this);
+		$("#resultModal").show();
+	}
+		}
+	};
+    }
 }

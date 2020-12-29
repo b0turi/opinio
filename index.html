@@ -106,16 +106,6 @@
                     data[i]['image'].crossOrigin = "anonymous";
                 }
                 drawCanvas($("#userName").val(), data);
-                setTimeout(() => {
-                    var result = new Image();
-                    result.crossOrigin = "anonymous";
-                    result.src = canvas.toDataURL();
-                    result.classList.add("resultImg");
-                    result.onload = function() {
-                        $("#result").html(this);
-                        $("#resultModal").show();
-                    }
-                }, 1000);
             });
 
             document.addEventListener("dragstart", function( event ) {
@@ -144,7 +134,11 @@
                     url: '/token',
                     success: function(res) {
                         accessToken = res.token;
-                    }
+			console.log(accessToken);
+                    },
+		error: function(res) {
+			console.log("ERROR", res);
+		}
                 });
             });
         </script>

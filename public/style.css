@@ -122,6 +122,7 @@
 
     .sort-btn {
         float: right;
+        margin-top:25px;
     }
 
     .album-container {
@@ -133,6 +134,10 @@
     .list-item {
         height: 125px;
         margin-left: 100px;
+    }
+
+    .sortable-drag {
+        opacity: 0 !important;
     }
 }
 
