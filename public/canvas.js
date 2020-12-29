@@ -165,15 +165,11 @@ function drawCanvas(userName, data) {
 
     let images = [];
     for(let i in data) {
-        let img = new Image();
-        img.src = data[i]['image'].src;
-        img.crossOrigin = "anonymous";
-        img.onload = function() {
-            images.push(this);
-        }
+    	images.push(data[i]['image']);
     }
+    console.log(images);
 
-    while(images.length < 10) {}
+    //while(images.length < 10) {}
 
     topText = userName.toUpperCase() + "'S TOP 10 ALBUMS OF 2020";
     drawBackground();

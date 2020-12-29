@@ -538,6 +538,7 @@ h1 {
 
 .form-container {
     padding:20px;
+position: relative;
 }
 
 #result {
