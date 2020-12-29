@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lilita+One&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 :root {
     --base: #ede5d7;
@@ -18,6 +18,242 @@
     --accent3-shading: #aaa071;
 }
 
+/* mobile */
+@media only screen and (max-width: 1000px) {
+    h1 {
+        font-size: 48px !important;
+        width: 100%;
+        text-shadow: 3px 4px var(--accent2-shading);
+    }
+
+    .inline-spotify-logo {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .header-search {
+        width: 100%;
+        font-size: 28px;
+        padding:10px;
+    }
+
+    .form-container {
+    }
+
+    .custom-album {
+        width: 100%;
+        font-size: 20px !important;
+    }
+
+    .custom-album-form {
+        width: 100%;
+    }
+
+    html, body {
+      overflow-x: hidden;
+    }
+    body {
+      position: relative
+    }
+    .search-caption {
+        font-size: 23px !important;
+    }
+
+    .header-search-icon {
+        padding-top: 29px;
+        font-size: 30px !important;
+        display: inline-block;
+        margin-top: -84px;
+        float: right;
+        margin-right: 10px;
+        position: relative;
+        color: var(--accent3-shading);
+    }
+
+    .suggestion-box {
+        width: 85%;
+        max-height: 500px;
+    }
+
+    .rank {
+        font-size: 50;
+        float: left;
+        width: 60;
+        margin-top: -19px;
+        text-align: center;
+        margin-right: -7px;
+        z-index: 100;
+        margin-left: -45px;
+    }
+
+    .main-album-desc-container {
+        padding: 10px;
+        margin-left: 135px;
+        padding-top: 0px;
+    }
+
+    .main-album-title {
+        font-size: 28px !important;
+        line-height: 28px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .main-album-artists {
+        font-size: 20px !important;
+        line-height: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .trash-btn {
+        float: left;
+        color: var(--accent2-shading);
+        text-shadow: 0px 0px;
+        font-size: 33px;
+        margin-top: 65px;
+    }
+
+    .sort-btn {
+        float: right;
+    }
+
+    .album-container {
+        height:100px;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .list-item {
+        height: 125px;
+        margin-left: 100px;
+    }
+}
+
+/* desktop */
+@media only screen and (min-width: 1000px) {
+    h1 {
+        font-size: 72px !important;
+        margin: 15px;
+        text-shadow: 4px 6px var(--accent2-shading);
+    }
+
+    .containerything {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .header-search {
+        width: 500px;
+        font-size: 34px;
+        padding: 18.5px;
+    }
+
+    .custom-album {
+        width: 400px;
+        font-size: 24px !important;
+    }
+
+    .custom-album-form {
+        width: 400px;
+    }
+
+    .add-album-button {
+        width: 40%;
+    }
+
+    .header-search-bottom {
+        margin-left: -50px;
+    }
+
+    .search-caption {
+        font-size: 25px !important;
+    }
+
+    .header-search-icon {
+        padding-top: 29px;
+        font-size: 34px !important;
+        position: absolute;
+        display: inline-block;
+        margin-left: -55px;
+        color: var(--accent3-shading);
+    }
+
+    .suggestion-box {
+        width: 480px;
+        max-height: 500px;
+    }
+
+    .main-album-title {
+        font-size: 36px !important;
+        line-height: 36px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .main-album-artists {
+        font-size: 24px !important;
+        line-height: 24px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .rank {
+        font-size: 90px;
+        float: left;
+        width: 100px;
+        margin-top: -20px;
+        text-align: center;
+    }
+
+    .trash-btn {
+        float: right;
+        color: var(--accent2-shading);
+        text-shadow: 0px 0px;
+        padding: 5px;
+        font-size: 60px;
+        cursor: pointer;
+        margin-top: 8px;
+    }
+
+    .main-album-desc-container {
+        padding: 10px;
+        margin-left: 195px;
+        padding-top: 0px;
+    }
+
+    .album-container {
+        height:100px;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 10px;
+    }
+
+    .list-item {
+        height: 140px;
+    }
+
+    .sort-btn {
+        display: none;
+    }
+}
+
+.avoid-wrap {
+    display:inline-block;
+}
+
 input:focus,
 select:focus,
 textarea:focus,
@@ -26,18 +262,26 @@ button:focus {
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Merriweather Sans';
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: 'Lilita One' !important;
+    overflow: hidden;
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
-.container {
+p {
+    margin: 10px 0px;
+}
+
+.containerything {
     background-color: var(--base);
+    width: 100%;
     height: 100%;
+    box-sizing: content-box;
+    overflow-x: hidden;
 }
 
 .header {
@@ -45,20 +289,18 @@ a {
     background-color: var(--accent1);
     border-bottom: 8px solid var(--accent1-shading);
     border-top: 2px solid var(--accent1-highlight);
+    width: 100%;
 }
 
 .title-box {
-    width: auto;
-    display: inline-block;
-    margin-left: 10px;
 }
 
 .title {
     color: var(--base);
     text-shadow: 2px 5px var(--shadow);
     font-family: 'Lilita One',cursive;
-    font-size: 48px;
-    padding: 10px;
+    font-size: 48px !important;
+    text-align: center;
 }
 
 .subtitle {
@@ -72,9 +314,6 @@ a {
 h1 {
     color: var(--accent2);
     font-family: 'Lilita One', cursive;
-    text-shadow: 4px 6px var(--accent2-shading);
-    margin: 15px;
-    font-size: 72px;
     text-align: center;
 }
 
@@ -107,27 +346,15 @@ h1 {
 }
 
 .header-search {
-    font-size: 34px;
     font-family: 'Lilita One';
-    padding: 18.5px;
     background-color: var(--accent3);
     border: none;
     border-bottom: 8px solid var(--accent3-shading);
     border-top: 2px solid var(--accent3-highlight);
-    float:right;
     color: var(--accent3-shading);
-}
-
-@media only screen and (min-width: 600px) {
-    .header-search-container {
-        float: right;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .header-search-container {
-        width: 80%;
-    }
+    border-radius: 15px;
+    display: inline;
+    padding-right: 60px;
 }
 
 .header-search::selection {
@@ -135,6 +362,192 @@ h1 {
     color: var(--accent3-highlight);
 }
 
-.header-search-icon {
-    padding-top: 22px;
+.search-caption {
+    width: 100%;
+    text-align: center;
+}
+
+.inline-spotify-logo {
+    vertical-align: middle;
+    width: 180px;
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
+
+.centered-row-container {
+    display:flex;
+}
+
+.centered-row {
+    margin: 0 auto;
+}
+
+.suggestion-box {
+    overflow-y: auto;
+    background-color: #fff;
+    position: absolute;
+    margin-left: 10px;
+    border-radius: 0px 0px 10px 10px;
+    z-index: 100;
+}
+
+.suggestion-box-bottom-border {
+    border-bottom: 8px solid #bbb;
+}
+
+.album-container-hoverable:hover {
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.album-title {
+    font-size: 25px !important;
+    line-height: 25px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.album-artists {
+    line-height: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+.album-desc-container {
+    padding: 10px;
+    margin-left: 100px;
+    padding-top: 0px;
+}
+
+.divider {
+    height: 2px;
+    background-color: #dedede;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+#loadMore {
+    padding: 12px;
+    text-align: center;
+    display: block;
+    width: 200px;
+    margin: 10 auto;
+    background-color: var(--accent1-highlight);
+    border-radius: 10px;
+    color: #fff;
+}
+
+.list-item {
+    user-select: none;
+    padding: 0px;
+    background-color: var(--accent2);
+    border-radius: 10px;
+    border-bottom: 8px solid var(--accent2-shading);
+    border-top: 2px solid var(--accent2-highlight);
+    color: var(--base);
+    text-shadow: 2px 5px var(--accent2-shading);
+    font-family: 'Lilita One';
+    font-size: 48px !important;
+    margin: 5px;
+    float: top;
+}
+
+.list-items{
+    flex-grow: 1;
+}
+
+.list-container {
+    flex-grow:1;
+    display: flex;
+    overflow-y: auto;
+}
+
+.custom-album {
+    font-family: 'Lilita One';
+    padding: 12.5px;
+    background-color: var(--accent3);
+    border: none;
+    border-bottom: 5px solid var(--accent3-shading);
+    border-top: 1px solid var(--accent3-highlight);
+    color: var(--accent3-shading);
+    border-radius: 15px;
+    display: block;
+    padding-right: 60px;
+    margin-top: 6px;
+}
+
+.custom-album::selection {
+    background-color: var(--accent3-shading);
+    color: var(--accent3-highlight);
+}
+
+.custom-album::placeholder {
+    color: var(--accent3-shading);
+    opacity: 0.4;
+}
+
+.custom-album-form {
+    margin: 0 auto;
+}
+
+.add-album-button {
+    background-color: var(--accent1);
+    margin: 10px auto;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    color: var(--base);
+    user-select: none;
+    cursor: pointer;
+    border-bottom: 5px solid var(--accent1-shading);
+    font-size: 24px !important;
+}
+
+.generate-button {
+    width: 100%;
+    background-color: var(--accent1);
+    margin: 15px auto;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    color: var(--base);
+    user-select: none;
+    cursor: pointer;
+    font-size: 36px !important;
+    font-family: 'Lilita One';
+    text-shadow: 2px 5px var(--shadow);
+    border-bottom: 5px solid var(--accent1-shading);
+}
+
+.generate-button:disabled {
+    cursor:not-allowed;
+    opacity: 0.6;
+}
+
+.form-container {
+    padding:20px;
+}
+
+#result {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 1.5vh;
+}
+
+.resultImg {
+    max-height: 65vh;
+    max-width: 95vw;
 }
