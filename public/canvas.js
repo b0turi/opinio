@@ -162,6 +162,19 @@ function drawBackground(){
 }
 
 function drawCanvas(userName, data) {
+
+    let images = [];
+    for(let i in data) {
+        let img = new Image();
+        img.src = data[i]['image'].src;
+        img.crossOrigin = "anonymous";
+        img.onload = function() {
+            images.push(this);
+        }
+    }
+
+    while(images.length < 10) {}
+
     topText = userName.toUpperCase() + "'S TOP 10 ALBUMS OF 2020";
     drawBackground();
     let goldText = '#FFFEC4';
@@ -181,7 +194,7 @@ function drawCanvas(userName, data) {
 
     ctx.fillStyle = goldShadow;
     ctx.fillRect(167, 107, 300, 300);
-    ctx.drawImage(data[0]['image'], 172, 112, 290, 290);
+    ctx.drawImage(images[0], 172, 112, 290, 290);
     let yOffset = drawText(20, 460, 480, 80, data[0]['album'], goldText, goldShadow);
     drawText(20, 460 + yOffset, 480, 45, data[0]['artist'], goldText, goldShadow);
 
@@ -191,7 +204,7 @@ function drawCanvas(userName, data) {
     drawText(200, 670 + yOffset, 280, 30, data[1]['artist'], silverText, silverShadow);
     ctx.fillStyle = silverShadow;
     ctx.fillRect(10, 600, 180, 180);
-    ctx.drawImage(data[1]['image'], 15, 605, 170, 170);
+    ctx.drawImage(images[1], 15, 605, 170, 170);
 
     ctx.font = '90px Arvo';
     ctx.save();
@@ -212,7 +225,7 @@ function drawCanvas(userName, data) {
     drawText(200, 875 + yOffset, 280, 30, data[2]['artist'], bronzeText, bronzeShadow);
     ctx.fillStyle = bronzeShadow;
     ctx.fillRect(10, 805, 180, 180);
-    ctx.drawImage(data[2]['image'], 15, 810, 170, 170);
+    ctx.drawImage(images[2], 15, 810, 170, 170);
 
     ctx.font = '90px Arvo';
     ctx.save();
@@ -228,7 +241,7 @@ function drawCanvas(userName, data) {
     ctx.restore();
 
     for(let i = 0; i < 7; i++) {
-        drawAlbum(710, 140 + i * 130, data[i + 3]['album'], data[i + 3]['artist'], i + 4, data[i + 3]['image']);
+        drawAlbum(710, 140 + i * 130, data[i + 3]['album'], data[i + 3]['artist'], i + 4, images[i + 3]);
     }
 
     ctx.font = '60px Lilita One';
